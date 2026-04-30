@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dog Breed Classifier</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <div class="panel form-panel">
+          <div class="title-block">
+            
+            <h1>Dog Breed Classifier</h1>
+          </div>
+
+          <form id="predict-form">
+            <label>
+              Dog name
+              <input id="dog-name" name="name" type="text" placeholder="Bruno" required>
+            </label>
+
+            <label>
+              Dog age
+              <input id="dog-age" name="age" type="number" min="0" max="30" step="0.1" placeholder="4" required>
+            </label>
+
+            <label class="upload-zone" for="dog-image">
+              <span id="upload-label">Choose a dog photo</span>
+              <input id="dog-image" name="image" type="file" accept="image/*" required>
+            </label>
+
+            <button type="submit" id="submit-button">Classify Breed</button>
+          </form>
+        </div>
+
+        <div class="panel result-panel">
+          <div class="preview-frame">
+            <img id="preview-image" alt="">
+            <div id="preview-empty">Photo preview</div>
+          </div>
+          <div class="result-copy">
+            <p id="status-text">Upload a photo to get started.</p>
+            <h2 id="result-title">Ready when you are.</h2>
+            <p id="confidence-text"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
